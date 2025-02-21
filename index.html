@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <!-- Orijinal meta, link ve font etiketleri -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no,minimal-ui">
+  <meta name="theme-color" content="#000000">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="robots" content="index">
+  <meta name="robots" content="follow">
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <meta name="google" content="notranslate">
+  <meta name="application-name" content="Genially">
+  <meta property="og:title" content="İnteraktif İnfografik">
+  <meta property="og:site_name" content="Genially">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="https://genially-thumbnails.genially.com/67a8da36cb572e7f1d57be1d.png?ts=1739119620651">
+  <meta property="og:image:secure_url" content="https://genially-thumbnails.genially.com/67a8da36cb572e7f1d57be1d.png?ts=1739119620651">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="675">
+  <meta property="og:url" content="https://view.genially.com/67a8da36cb572e7f1d57be1d/interactive-content-education-timeline">
+  <meta property="og:type" content="website">
+  <meta property="fb:app_id" content="1494586530820799">
+  <meta name="twitter:card" content="player">
+  <meta name="twitter:site" content="@genially_es">
+  <meta name="twitter:domain" content="https://genially.com/">
+  <meta name="twitter:title" content="Education Timeline">
+  <meta name="twitter:description" content="">
+  <meta name="twitter:image" content="https://genially-thumbnails.genially.com/67a8da36cb572e7f1d57be1d.png?ts=1739119620651">
+  <meta name="twitter:player" content="https://view.genially.com/67a8da36cb572e7f1d57be1d">
+  <meta name="twitter:player:width" content="1200">
+  <meta name="twitter:player:height" content="675">
+  <meta name="description" content="">
+  <meta name="p:domain_verify" content="eaaac27aee644a70f919ccfe01fcd3d6">
+  <link rel="alternate" type="application/json+oembed" href="https://genially.com/services/oembed?url=https://view.genially.com/67a8da36cb572e7f1d57be1d" title="Education Timeline">
+  <link rel="apple-touch-icon" href="https://genially-thumbnails.genially.com/67a8da36cb572e7f1d57be1d.png?ts=1739119620651">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link href="statics-view-sub/view/static/css/reset.0.0.85.css" rel="stylesheet">
+  <link rel="canonical" href="https://view.genially.com" />
+  <title>İnteraktif İnfografik</title>
+  
+  <!-- Genially CSS -->
+  <link href="https://statics-view.genially.com/view/static/css/main.a1ad417e.css" rel="stylesheet">
+  <link href="https://statics-view.genially.com/view/static/css/social.0.0.85.css" rel="stylesheet">
+  
+  <!-- Aşağıdaki stil, loading ekranı, container, overlay’ler ve fixed-box’lar için -->
+  <style>
+    /* Genel sıfırlamalar */
+    html, body, main {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+    
+    /* Loading ekranı: tam ekran beyaz arka plan, ortada 300x300 px beyaz kare */
+    .loading-screen {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      z-index: 10000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .loading-box {
+      width: 300px;
+      height: 300px;
+      background-color: white;
+    }
+    
+    /* Sabit konumda container: tüm cihazlarda ekranı kaplar */
+    .container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+    }
+    
+    /* Overlay’ler: alt, sol ve sağ kısımları kapatan öğeler */
+    .bottom-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5%; /* Masaüstünde */
+      background-color: #242424;
+      z-index: 10;
+    }
+    .left-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 140px; /* Masaüstünde */
+      height: 100%;
+      background-color: #242424;
+      z-index: 10;
+    }
+    .right-overlay {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 140px; /* Masaüstünde */
+      height: 100%;
+      background-color: #242424;
+      z-index: 10;
+    }
+    
+    /* Mobil uyumluluk: mobilde sol ve sağ overlay kaldırılıyor, alt overlay yüksekliği artırılıyor */
+    @media (max-width: 768px) {
+      .left-overlay, .right-overlay {
+        width: 0%;
+      }
+      .bottom-overlay {
+        height: 60%;
+      }
+    }
+    
+    /* Yatay mod (landscape): sol ve sağ overlay genişliği %9 */
+    @media (orientation: landscape) {
+      .left-overlay, .right-overlay {
+        width: 9%;
+        
+      }
+    }
+    
+    /* Orijinal fixed-box’lar (varsa) */
+
+    @media (max-width: 768px) {
+      .fixed-box, .fixed-box2, .fixed-box3 {
+        bottom: 0.2cm;
+      }
+    }
+    
+    /* Genially embed konteynerlerinin tam ekran kaplaması */
+    .genially-embed,
+    .container-wrapper-genially {
+      min-height: 100vh;
+      height: 100%;
+    }
+    @media (max-width: 768px) {
+      .genially-embed, .container-wrapper-genially {
+        min-height: 100vh;
+        height: 100%;
+      }
+    }
+    
+    
+  </style>
+  
+  <!-- Schema.org, oEmbed ve diğer script/ld+json etiketleri -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Education Timeline",
+    "abstract": "",
+    "author": {
+      "@type": "Person",
+      "name": "emre çiftçioğlu (cresas)"
+    },
+    "accountablePerson": {
+      "@type": "Person",
+      "name": "emre çiftçioğlu (cresas)"
+    },
+    "dateModified": "February 9, 2025",
+    "provider": {
+      "@type": "Corporation",
+      "name": "Genially",
+      "alternateName": [
+        "Genially", "Genially Web", "Genially Web S.L", "Genially S.L."
+      ],
+      "url": "https://genially.com",
+      "logo": "https://genially.com/assets/img/genially-icon.png",
+      "sameAs": [
+        "https://www.facebook.com/Genially/",
+        "https://twitter.com/genially_en/",
+        "https://www.instagram.com/genially_official/",
+        "https://www.youtube.com/channel/UCtq6w3zpUc5tQYEC6Q8pImg",
+        "https://www.linkedin.com/company/geniallyofficial/",
+        "https://www.pinterest.es/geniallyweb/"
+      ]
+    }
+  }
+  </script>
+  <link rel="canonical" href="https://view.genially.com/67a8da36cb572e7f1d57be1d/interactive-content-education-timeline">
+</head>
+<body>
+  <!-- Orijinal fixed-box öğeleri -->
+
+  
+  <!-- Loading ekranı (tam ekran beyaz, ortada 300x300 px kare) -->
+  <div class="loading-screen" id="loading-screen">
+    </center><div class="loading-box">&nbsp;&nbsp;<center><h3>YÜKLENİYOR</h3></center></div>
+  </div>
+  
+  <!-- Sabit konumda container; içeride Genially embed kodu ve overlay’ler yer alıyor -->
+  <div class="container" id="container">
+    <div class="genially-social-container-genially genially-horizontal" data-width="1200" data-height="675">
+      <noscript>You need to enable JavaScript to run this app.</noscript>
+      <div class="container-wrapper-genially" style="position: relative; width: 100%;">
+        <video class="loader-genially" autoplay loop playsinline muted style="position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); width: 120px; height: 120px; margin-bottom: 10%;">
+          <source src="https://static.genially.com/resources/loader-default-rebranding.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div id="67a8da36cb572e7f1d57be1d" class="genially-embed" data-ostyle="margin: 0px auto; position: relative; height: auto; width: 100%;"></div>
+      </div>
+    </div>
+    <!-- Overlay’ler: alt, sol ve sağ -->
+    <div class="bottom-overlay"></div>
+    <div class="left-overlay"></div>
+    <div class="right-overlay"></div>
+  </div>
+  
+  <!-- Genially sosyal header ve ilgili script’ler -->
+  <section class="genially-social-header"></section>
+  <main>
+    <script defer type="text/javascript" src="https://statics-view.genially.com/view/static/js/dist/social.0.0.55.min.js"></script>
+    <script defer type="text/javascript" src="https://statics-view.genially.com/view/static/js/runtime.be5ecb87.js"></script>
+    <script defer type="text/javascript" src="https://statics-view.genially.com/view/static/js/main.42521270.js"></script>
+    <script>
+      // Genially embed (iframe yerine embed) tamamen yüklendiğinde loading ekranını gizle ve container'ı görünür yap
+      function onIframeLoad() {
+        document.getElementById('loading-screen').style.display = 'none';
+        document.getElementById('container').style.visibility = 'visible';
+      }
+      // Ek güvence: Eğer embed yüklenme süresi uzun sürerse 2 saniye sonra da gizle
+      window.onload = function() {
+        setTimeout(function() {
+          document.getElementById('loading-screen').style.display = 'none';
+          document.getElementById('container').style.visibility = 'visible';
+        }, 2000);
+      };
+    </script>
+  </main>
+</body>
+</html>
